@@ -48,16 +48,17 @@ dog4 = Dog.new("4. Bindi", "Springer Spanial", 2)
 dog4.walk(60)
 dog4.display_walk
 
+# Note: Juno and Bindi both need 60 min walks and can be walked together!
 a = "Press "
 b = "return/enter"
-
 puts a + Rainbow(b).orange
-enter = gets.chomp
+gets.chomp
 puts "Note: " + Rainbow("Juno").green + " and " + Rainbow("Bindi").green + " both need 60 min walks and can be walked together! "
 puts a + Rainbow(b).orange
-enter = gets.chomp
-puts "Which dog would you like to walk? "
+gets.chomp
 
+#
+puts "Which dog would you like to walk? "
 a = "To Walk "
 b = ", "
 c = "Enter: "
@@ -67,19 +68,12 @@ puts a + Rainbow("Fluffy").green + b + c + Rainbow("3").orange
 puts a + Rainbow("Bindi").green + b + c + Rainbow("4").orange
 puts a + Rainbow("Juno & Bindi").green + b + c + Rainbow("5").orange
 
-puts "Enter Selection Here: "
-selection = gets.chomp
+loop do
+    puts "Enter Selection Here: "
+    selection = gets.chomp.to_i
+    break if selection.between?(1, 5)
 
+    puts "Error, please select a valid number "
+end
 
-#     if 1
-#         puts "You have chosen to walk Buster "
-#     if 2
-#         puts "You have chosen to walk Juno "
-#     if 3
-#         puts "You have chosen to walk Fluffy "
-#     if 4
-#         puts "You have chosen to walk Bindi "
-#     else  
-#         puts "Error, Please select a valid number: "
-#     end
-# end
+puts "selected "
