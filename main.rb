@@ -1,13 +1,18 @@
 require 'rainbow'
 
-puts Rainbow("Hello! Welcome to Woofz. To begin, please enter your name: ").orange
-name = gets.chomp
-puts "Hello #{name.capitalize}, Are you ready to walk a dog?:" + Rainbow(" Y/N ?").orange
-ready = gets.chomp
-puts "Okay, #{name.capitalize}. Let's choose a dog to walk! "
+puts Rainbow("Hello! Welcome to Woofz. To begin, please select one of the options below: ").orange
+puts Rainbow("To view available jobs and select/confirm a job, Enter:").blue + Rainbow(" 1 ").blue
 
-puts "Press " + Rainbow("'return/enter'").orange + " for a list of dogs that need walks today! "
-dog = gets.chomp
+user_input = gets.chomp.capitalize
+if user_input == '1'
+    puts Rainbow("To get started, please enter your name: ").orange
+    name = gets.chomp
+    puts "Hello #{name.capitalize}, Are you ready to find a dog to walk?:" + Rainbow(" Y/N ?").orange
+    ready = gets.chomp
+    puts "Okay, #{name.capitalize}. Let's choose a dog to walk! "
+    puts Rainbow("return/enter ").orange + "for a list of dogs that need walks today! "
+    dog = gets.chomp
+end
 
 class Dog
     attr_reader :age, :breed
@@ -49,15 +54,14 @@ dog4.walk(60)
 dog4.display_walk
 
 # Note: Juno and Bindi both need 60 min walks and can be walked together!
-a = "Press "
 b = "return/enter"
-puts a + Rainbow(b).orange
+puts Rainbow(b).orange
 gets.chomp
 puts "Note: " + Rainbow("Juno").green + " and " + Rainbow("Bindi").green + " both need 60 min walks and can be walked together! "
-puts a + Rainbow(b).orange
+puts Rainbow(b).orange
 gets.chomp
 
-#
+
 puts "Which dog would you like to walk? "
 a = "To Walk "
 b = ", "
@@ -68,12 +72,43 @@ puts a + Rainbow("Fluffy").green + b + c + Rainbow("3").orange
 puts a + Rainbow("Bindi").green + b + c + Rainbow("4").orange
 puts a + Rainbow("Juno & Bindi").green + b + c + Rainbow("5").orange
 
-loop do
-    puts "Enter Selection Here: "
-    selection = gets.chomp.to_i
-    break if selection.between?(1, 5)
+user_input = gets.chomp.capitalize
+confirm = 0
+# conditional statement: if else logic to take different path based on whether the condition was evaluated to true
 
-    puts "Error, please select a valid number "
+if user_input == '1'
+    puts "You have chosen to walk Buster! Confirm" + Rainbow(" Y/N ?").orange
+    confirm = gets.chomp.to_i
+    puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Buster ").green + Rainbow("for a ").blue + Rainbow("30 min ").red + Rainbow("walk.").blue
+    puts Rainbow("You will be paid ").blue + Rainbow("$20 ").red + Rainbow("for this walk!").blue
+    puts Rainbow("return/enter to finish").orange
+elsif user_input == '2'
+    puts "You have chosen to walk " + Rainbow("Juno!").green + " Confirm" + Rainbow(" Y/N ?").orange
+    confirm = gets.chomp.to_i
+    puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+    puts Rainbow("You will be paid ").blue + Rainbow("$30 ").red + Rainbow("for this walk!").blue
+    puts Rainbow("return/enter to finish").orange
+elsif user_input == '3'
+    puts "You have chosen to walk " + Rainbow("Fluffy!").green + " Confirm" + Rainbow(" Y/N ?").orange
+    confirm = gets.chomp.to_i
+    puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Fluffy ").green + Rainbow("for a ").blue + Rainbow("45 min ").red + Rainbow("walk.").blue
+    puts Rainbow("You will be paid ").blue + Rainbow("$25 ").red + Rainbow("for this walk!").blue
+    puts Rainbow("return/enter to finish").orange
+elsif user_input == '4'
+    puts "You have chosen to walk " + Rainbow("Bindi!").green + " Confirm" + Rainbow(" Y/N ?").orange
+    confirm = gets.chomp.to_i
+    puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Bindi ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+    puts Rainbow("You will be paid ").blue + Rainbow("$30 ").red + Rainbow("for this walk!").blue
+    puts Rainbow("return/enter to finish").orange
+elsif user_input == '5'
+    puts "You have chosen to walk " + Rainbow("Juno & Bindi ").green + "together! Confirm" + Rainbow(" Y/N ?").orange
+    confirm = gets.chomp.to_i
+    puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno & Bindi ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+    puts Rainbow("You will be paid ").blue + Rainbow("$40 ").red + Rainbow("for this walk!").blue
+    puts Rainbow("return/enter to finish").orange
+else
+    puts "Invalid Entry, Try Again !"
 end
+gets.chomp
 
-puts "selected "
+puts Rainbow("Thank You, Have A Nice Day!").orange
