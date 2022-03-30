@@ -1,17 +1,13 @@
-puts "Enter Your Name: "
-name = gets.chomp()
-puts ("Hello " + name)
+require 'rainbow'
 
-puts "Are you ready to walk?: Y/N "
-ready = gets.chomp()
+puts Rainbow("Hello! Welcome to Woofz. To begin, please enter your name: ").orange
+name = gets.chomp
+puts "Hello #{name.capitalize}, Are you ready to walk a dog?:" + Rainbow(" Y/N ?").orange
+ready = gets.chomp
+puts "Okay, #{name.capitalize}. Let's choose a dog to walk! "
 
-yes = true
-if yes
-    puts "Let's go for a walk!"
-end 
-
-puts "Pick a dog to walk: Press 'Enter' for list of dogs that need walks! "
-dog = gets.chomp()
+puts "Press " + Rainbow("'return/enter'").orange + " for a list of dogs that need walks today! "
+dog = gets.chomp
 
 class Dog
     attr_reader :age, :breed
@@ -25,32 +21,65 @@ class Dog
 
     end
 
-    def walk(distance_in_kms)
-        @walk << distance_in_kms
+    def walk(time_in_mins)
+        @walk << time_in_mins
     end
 
-    def walk_distance
+    def walk_time
         return @walk.sum
     end
 
     def display_walk
-    puts "#{@name} needs to be walked #{walk_distance} kms "
-    # @walk.each_with_index { |distance, index| puts "#{index+1}. #{distance} km " }
+    puts Rainbow("#{@name} ").green + "is a " + Rainbow("#{@breed}").red + ", is #{@age} years old and needs a #{walk_time} min walk. "
     end
 end
 
 #Main
-dog1 = Dog.new("Buster", "Labrador", 4)
-dog1.walk(3)
+dog1 = Dog.new("1. Buster", "Labrador", 4)
+dog1.walk(30)
 dog1.display_walk
-dog2 = Dog.new("Juno", "Border Collie", 2)
-dog2.walk(4)
+dog2 = Dog.new("2. Juno", "Border Collie", 2)
+dog2.walk(60)
 dog2.display_walk
-dog3 = Dog.new("Fluffy", "Groodle", 1)
-dog3.walk(5)
+dog3 = Dog.new("3. Fluffy", "Groodle", 3)
+dog3.walk(45)
 dog3.display_walk
-dog4 = Dog.new("Bindi", "Springer Spanial", 2)
-dog4.walk(4)
+dog4 = Dog.new("4. Bindi", "Springer Spanial", 2)
+dog4.walk(60)
 dog4.display_walk
-gets.chomp
-puts "'Juno' and 'Bindi' both need 4 kms and can be walked together! "
+
+a = "Press "
+b = "return/enter"
+
+puts a + Rainbow(b).orange
+enter = gets.chomp
+puts "Note: " + Rainbow("Juno").green + " and " + Rainbow("Bindi").green + " both need 60 min walks and can be walked together! "
+puts a + Rainbow(b).orange
+enter = gets.chomp
+puts "Which dog would you like to walk? "
+
+a = "To Walk "
+b = ", "
+c = "Enter: "
+puts a + Rainbow("Buster").green + b + c + Rainbow("1").orange
+puts a + Rainbow("Juno").green + b + c + Rainbow("2").orange
+puts a + Rainbow("Fluffy").green + b + c + Rainbow("3").orange
+puts a + Rainbow("Bindi").green + b + c + Rainbow("4").orange
+puts a + Rainbow("Juno & Bindi").green + b + c + Rainbow("5").orange
+
+puts "Enter Selection Here: "
+selection = gets.chomp
+
+
+#     if 1
+#         puts "You have chosen to walk Buster "
+#     if 2
+#         puts "You have chosen to walk Juno "
+#     if 3
+#         puts "You have chosen to walk Fluffy "
+#     if 4
+#         puts "You have chosen to walk Bindi "
+#     else  
+#         puts "Error, Please select a valid number: "
+#     end
+# end
