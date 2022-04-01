@@ -75,50 +75,59 @@ loop do
         puts a + Rainbow("Bindi").green + b + c + Rainbow("4").orange
         puts a + Rainbow("Juno & Bindi").green + b + c + Rainbow("5").orange
 
-    user_input = gets.chomp.capitalize
-    confirm = 0
-    # conditional statement: if else logic to take different path based on whether the condition was evaluated to true
+        user_input = gets.chomp.capitalize
+        confirm = 0
+        # conditional statement: if else logic to take different path based on whether the condition was evaluated to true
 
-    if user_input == '1'
-        puts "You have chosen to walk Buster! Confirm" + Rainbow(" Y/N ?").orange
-        confirm = gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Buster ").green + Rainbow("for a ").blue + Rainbow("30 min ").red + Rainbow("walk.").blue
-        puts Rainbow("return/enter").orange
+        a = "return/enter for main menu!"
+        b = "return/enter to continue.."
+        c = "You have chosen to walk "
+        d = " Confirm"
+    if  user_input == '1'
+        puts c + Rainbow("Buster!").green + d + Rainbow(" Y/N ?").orange
+        gets.chomp.to_i
+        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Buster ").green
+        + Rainbow("for a ").blue + Rainbow("30 min ").red + Rainbow("walk.").blue
+        puts Rainbow(b).orange
         gets.chomp
         puts Rainbow("You will be paid ").blue + Rainbow("$20 ").red + Rainbow("for this walk!").blue
-        puts Rainbow("return/enter to finish").orange
+        puts Rainbow(a).orange
     elsif user_input == '2'
-        puts "You have chosen to walk " + Rainbow("Juno!").green + " Confirm" + Rainbow(" Y/N ?").orange
-        confirm = gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
-        puts Rainbow("return/enter").orange
+        puts c + Rainbow("Juno!").green + d + Rainbow(" Y/N ?").orange
+        gets.chomp.to_i
+        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno ").green + Rainbow("for a ").blue
+        + Rainbow("60 min ").red + Rainbow("walk.").blue
+        puts Rainbow(b).orange
         gets.chomp
         puts Rainbow("You will be paid ").blue + Rainbow("$30 ").red + Rainbow("for this walk!").blue
-        puts Rainbow("return/enter to finish").orange
+        puts Rainbow(a).orange
     elsif user_input == '3'
-        puts "You have chosen to walk " + Rainbow("Fluffy!").green + " Confirm" + Rainbow(" Y/N ?").orange
-        confirm = gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Fluffy ").green + Rainbow("for a ").blue + Rainbow("45 min ").red + Rainbow("walk.").blue
-        puts Rainbow("return/enter").orange
+        puts c + Rainbow("Fluffy!").green + d + Rainbow(" Y/N ?").orange
+        gets.chomp.to_i
+        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Fluffy ").green
+        + Rainbow("for a ").blue + Rainbow("45 min ").red + Rainbow("walk.").blue
+        puts Rainbow(b).orange
         gets.chomp
         puts Rainbow("You will be paid ").blue + Rainbow("$25 ").red + Rainbow("for this walk!").blue
-        puts Rainbow("return/enter to finish").orange
+        puts Rainbow(a).orange
     elsif user_input == '4'
-        puts "You have chosen to walk " + Rainbow("Bindi!").green + " Confirm" + Rainbow(" Y/N ?").orange
-        confirm = gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Bindi ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
-        puts Rainbow("return/enter").orange
+        puts c + Rainbow("Bindi!").green + d + Rainbow(" Y/N ?").orange
+        gets.chomp.to_i
+        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Bindi ").green + Rainbow("for a ").blue
+        + Rainbow("60 min ").red + Rainbow("walk.").blue
+        puts Rainbow(b).orange
         gets.chomp
         puts Rainbow("You will be paid ").blue + Rainbow("$30 ").red + Rainbow("for this walk!").blue
-        puts Rainbow("return/enter to finish").orange
+        puts Rainbow(a).orange
     elsif user_input == '5'
-        puts "You have chosen to walk " + Rainbow("Juno & Bindi ").green + "together! Confirm" + Rainbow(" Y/N ?").orange
-        confirm = gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno & Bindi ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
-        puts Rainbow("return/enter").orange
+        puts c + Rainbow("Juno & Bindi").green + d + Rainbow(" Y/N ?").orange
+        gets.chomp.to_i
+        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno & Bindi ").green
+        + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+        puts Rainbow(b).orange
         gets.chomp
         puts Rainbow("You will be paid ").blue + Rainbow("$40 ").red + Rainbow("for this walk!").blue
-        puts Rainbow("return/enter for main menu!").orange
+        puts Rainbow(a).orange
     else
         puts "Invalid Entry, Try Again !"
     end
