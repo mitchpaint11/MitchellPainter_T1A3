@@ -1,5 +1,4 @@
 require 'rainbow'
-
 puts Rainbow("Hello! Welcome to Woofz. To begin, please select one of the options below: ").orange
 puts Rainbow("For Current Available Jobs, Enter:").blue + Rainbow(" A ").orange
 puts Rainbow("For Future Jobs, Enter:").blue + Rainbow(" B ").orange
@@ -62,7 +61,6 @@ gets.chomp
 puts "Note: " + Rainbow("Juno").green + " and " + Rainbow("Bindi").green + " both need 60 min walks and can be walked together! "
 puts Rainbow(b).orange
 gets.chomp
-
 
 puts "Which dog would you like to walk? "
 a = "To Walk "
