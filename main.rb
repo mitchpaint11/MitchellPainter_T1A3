@@ -8,7 +8,7 @@ class Dog
     def initialize(name, breed, age, future_walk, date)
         @name = name
         @breed = breed
-        @age = age
+        @age = Rainbow(age).blue
         @future_walk = Rainbow(future_walk).blue
         @date = Rainbow(date).green
         @walk = []
@@ -66,20 +66,20 @@ loop do
         puts "Hello #{name.capitalize}, Are you ready to find a dog to walk?:" + Rainbow(" Y/N ?").orange
         gets.chomp
         puts "Okay, #{name.capitalize}. Let's choose a dog to walk! "
-        puts Rainbow("return/enter ").orange + Rainbow("for a list of dogs that need walks today! ").blue
+        puts Rainbow("return/enter ").orange + "for a list of dogs that need walks today! "
         gets.chomp
 
         # Main
-        dog1 = Dog.new("1. Buster", "Labrador", 4)
+        dog1 = Dog.new("1. Buster", "Labrador", 4, "12:00", "03/05/2022")
         dog1.walk(30)
         dog1.display_walk
-        dog2 = Dog.new("2. Juno", "Border Collie", 2)
+        dog2 = Dog.new("2. Juno", "Border Collie", 2, "12:00", "03/05/2022")
         dog2.walk(60)
         dog2.display_walk
-        dog3 = Dog.new("3. Fluffy", "Groodle", 3)
+        dog3 = Dog.new("3. Fluffy", "Groodle", 3, "12:00", "03/05/2022")
         dog3.walk(45)
         dog3.display_walk
-        dog4 = Dog.new("4. Bindi", "Springer Spanial", 2)
+        dog4 = Dog.new("4. Bindi", "Springer Spanial", 2, "12:00", "03/05/2022")
         dog4.walk(60)
         dog4.display_walk
 
@@ -111,42 +111,42 @@ loop do
     when "1"
         puts chosen_dog + Rainbow("Buster!").green + confirm + Rainbow(" Y/N ?").orange
         gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Buster ").green + Rainbow("for a ").blue + Rainbow("30 min ").red + Rainbow("walk.").blue
+        puts "Great, You have confirmed you will take " + Rainbow("Buster ").green + "for a " + Rainbow("30 min ").red + "walk."
         puts return_continue
         gets.chomp
-        puts Rainbow("You will be paid ").blue + Rainbow("$20 ").red + Rainbow("for this walk!").blue
+        puts "You will be paid " + Rainbow("$20 ").red + "for this walk!"
         puts return_main_menu
     when "2"
         puts chosen_dog + Rainbow("Juno!").green + confirm + Rainbow(" Y/N ?").orange
         gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+        puts "Great, You have confirmed you will take " + Rainbow("Juno ").green + "for a " + Rainbow("60 min ").red + "walk."
         puts return_continue
         gets.chomp
-        puts Rainbow("You will be paid ").blue + Rainbow("$30 ").red + Rainbow("for this walk!").blue
+        puts "You will be paid " + Rainbow("$30 ").red + "for this walk!"
         puts return_main_menu
     when "3"
         puts chosen_dog + Rainbow("Fluffy!").green + confirm + Rainbow(" Y/N ?").orange
         gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Fluffy ").green + Rainbow("for a ").blue + Rainbow("45 min ").red + Rainbow("walk.").blue
+        puts "Great, You have confirmed you will take " + Rainbow("Fluffy ").green + "for a " + Rainbow("45 min ").red + "walk."
         puts return_continue
         gets.chomp
-        puts Rainbow("You will be paid ").blue + Rainbow("$25 ").red + Rainbow("for this walk!").blue
+        puts "You will be paid " + Rainbow("$25 ").red + "for this walk!"
         puts return_main_menu
     when "4"
         puts chosen_dog + Rainbow("Bindi!").green + confirm + Rainbow(" Y/N ?").orange
         gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Bindi ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+        puts "Great, You have confirmed you will take " + Rainbow("Bindi ").green + "for a " + Rainbow("60 min ").red + "walk."
         puts return_continue
         gets.chomp
-        puts Rainbow("You will be paid ").blue + Rainbow("$30 ").red + Rainbow("for this walk!").blue
+        puts "You will be paid " + Rainbow("$30 ").red + "for this walk!"
         puts return_main_menu
     when "5"
         puts chosen_dog + Rainbow("Juno & Bindi").green + confirm + Rainbow(" Y/N ?").orange
         gets.chomp.to_i
-        puts Rainbow("Great, You have confirmed you will take ").blue + Rainbow("Juno & Bindi ").green + Rainbow("for a ").blue + Rainbow("60 min ").red + Rainbow("walk.").blue
+        puts "Great, You have confirmed you will take " + Rainbow("Juno & Bindi ").green + "for a " + Rainbow("60 min ").red + "walk."
         puts return_continue
         gets.chomp
-        puts Rainbow("You will be paid ").blue + Rainbow("$40 ").red + Rainbow("for this walk!").blue
+        puts "You will be paid " + Rainbow("$40 ").red + "for this walk!"
         puts return_main_menu
     else
         puts invalid
