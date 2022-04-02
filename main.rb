@@ -9,6 +9,7 @@ class Dog
         @breed = breed
         @age = age
         @walk = []
+        @future_walk = []
     end
 
     def walk(time_in_mins)
@@ -19,8 +20,20 @@ class Dog
         return @walk.sum
     end
 
+    def future_walk(time_of_day)
+        @future_walk << time_of_day
+    end
+
+    def future_walk_time
+        return @future_walk.sum
+    end
+
     def display_walk
     puts Rainbow("#{@name} ").green + "is a " + Rainbow("#{@breed}").red + ", is #{@age} years old and needs a #{walk_time} min walk. "
+    end
+    def display_future_walk
+    a = ","
+    puts Rainbow(" #{@name}").green + a + Rainbow(" #{@breed}").red + a + " #{@age} yrs old" + a + " #{walk_time} min walk" + a + "#{future_walk_time}"
     end
 end
 
@@ -127,8 +140,52 @@ loop do
         puts invalid
     end
         gets.chomp
+
     when "2"
-        puts "Future/Upcoming Jobs"
+        puts Rainbow("Future/Upcoming Jobs").blue
+        puts " Name:    Breed:   Age:   Walk-duration:  Time/24hrs: "
+        dog1 = Dog.new("1. Cooper", "Labrador", 4)
+        dog1.walk(30)
+        dog1.future_walk(1200)
+        dog1.display_future_walk
+        dog2 = Dog.new("2. Koda", "Border Collie", 2)
+        dog2.walk(60)
+        dog2.future_walk(1100)
+        dog2.display_future_walk
+        dog3 = Dog.new("3. Sandy", "Groodle", 3)
+        dog3.walk(45)
+        dog3.future_walk(1300)
+        dog3.display_future_walk
+        dog4 = Dog.new("4. Bailey", "Springer Spanial", 2)
+        dog4.walk(60)
+        dog4.future_walk(1300)
+        dog4.display_future_walk
+        dog5 = Dog.new("5. Harley", "Australian Shepherd", 5)
+        dog5.walk(60)
+        dog5.future_walk(1500)
+        dog5.display_future_walk
+        dog6 = Dog.new("6. Thor", "Australian Cattle Dog", 2)
+        dog6.walk(60)
+        dog6.future_walk(1100)
+        dog6.display_future_walk
+        dog7 = Dog.new("7. Teddy", "Groodle", 3)
+        dog7.walk(45)
+        dog7.future_walk(1200)
+        dog7.display_future_walk
+        dog8 = Dog.new("8. Benji", "Border Collie", 6)
+        dog8.walk(30)
+        dog8.future_walk(1600)
+        dog8.display_future_walk
+        dog9 = Dog.new("9. Piper", "Springer Spanial", 4)
+        dog9.walk(30)
+        dog9.future_walk(1700)
+        dog9.display_future_walk
+        dog10 = Dog.new("10. Peanut", "Beagle", 1)
+        dog10.walk(30)
+        dog10.future_walk(1200)
+        dog10.display_future_walk
+        puts Rainbow("return/enter for main menu!").orange
+        gets.chomp
     when "3"
         puts "Past Jobs"
     when "4"
