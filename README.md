@@ -17,4 +17,13 @@ The user will then be prompted to “return/enter for main menu” prompting the
 ##### Feature 2 - Future/Upcoming Jobs:
 If "2" is selected it allows the user (Dog Walker) to view future dog walking jobs and make any changes or cancellations required. If "2" is selected from the menu options it will allow the user to view any future/upcoming walking jobs that have been requested, allowing the user to view things like the job date, time, name, age, breed and walk duration. The user will also be able to make any changes to these bookings as required, E.g. changes to the booking date/time or walk duration or make any cancellations/deletions to any future bookings. It will also allow the user to add any new walking jobs or data that may be required and not yet input.
 ##### Feature 3 - Past Jobs:
-If "3" is selected, it allows the user (Dog Walker) to view an archive of any past, completed dog walking jobs and see when they occurred and who walked which dog. This allows the user to view the dogs’ information such as, what day/time the dog was walked, who walked the dog, and The walk duration in minutes. It also displays the dog owners’ contact information, such as Names, Addresses and Phone Numbers, and allows the user to view a rating/5 the customer made, based on the service they felt they received. 
+If "3" is selected, it allows the user (Dog Walker) to view an archive of any past, completed dog walking jobs and see when they occurred and who walked which dog. This allows the user to view the dogs’ information such as, what day/time the dog was walked, who walked the dog, and The walk duration in minutes. It also displays the dog owners’ contact information, such as Names, Addresses and Phone Numbers, and allows the user to view a rating/5 the customer made, based on the service they felt they received.
+
+#### Implementaion plan:
+
+
+
+
+
+
+#### Help Documentation:
