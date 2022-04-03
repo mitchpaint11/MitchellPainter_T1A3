@@ -170,35 +170,46 @@ loop do
         dog1 = Dog.new("1. Cooper", "Labrador", 4, "12:00", "03/05/2022")
         dog1.walk(30)
         dog1.display_future_walk
+
         dog2 = Dog.new("2. Koda", "Border Collie", 2, "11:00", "08/05/2022")
         dog2.walk(60)
         dog2.display_future_walk
+
         dog3 = Dog.new("3. Sandy", "Groodle", 3, "13:00", "12/05/2022")
         dog3.walk(45)
         dog3.display_future_walk
+
         dog4 = Dog.new("4. Bailey", "Springer Spanial", 2, "13:30", "28/07/2022")
         dog4.walk(60)
         dog4.display_future_walk
+
         dog5 = Dog.new("5. Harley", "Australian Shepherd", 5, "15:00", "21/06/2022")
         dog5.walk(60)
         dog5.display_future_walk
+
         dog6 = Dog.new("6. Thor", "Australian Cattle Dog", 2, "11:00", "17/06/2022")
         dog6.walk(60)
         dog6.display_future_walk
+
         dog7 = Dog.new("7. Teddy", "Groodle", 3, "12:30", "13/05/2022")
         dog7.walk(45)
         dog7.display_future_walk
+
         dog8 = Dog.new("8. Benji", "Border Collie", 6, "16:00", "20/06/2022")
         dog8.walk(30)
         dog8.display_future_walk
+
         dog9 = Dog.new("9. Piper", "Springer Spanial", 4, "17:00", "05/05/2022")
         dog9.walk(30)
         dog9.display_future_walk
+
         dog10 = Dog.new("10. Peanut", "Beagle", 1, "16:00", "14/05/2022")
         dog10.walk(30)
         dog10.display_future_walk
+
         puts Rainbow("return/enter for main menu!").orange
         gets.chomp
+
     when "3"
         puts Rainbow("Past Jobs").blue
         owner1 = Owner.new("John Doe", "261 Anywhere st", "0401234567", 5)
@@ -320,8 +331,10 @@ loop do
         dog20 = Dog.new("20. Blue", "Beagle", 3, "17:00", "17/03/2022")
         dog20.walk(30)
         dog20.display_future_walk
+
         puts Rainbow("return/enter for main menu!").orange
         gets.chomp
+
     when "4"
         puts Rainbow("Thank You, Have A Nice Day!").orange
         break
