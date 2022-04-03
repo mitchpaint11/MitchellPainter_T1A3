@@ -26,10 +26,30 @@ If "2" is selected it allows the user (Dog Walker) to view future dog walking jo
 If "3" is selected, it allows the user (Dog Walker) to view an archive of any past, completed dog walking jobs and see when they occurred and who walked which dog. This allows the user to view the dogs’ information such as, what day/time the dog was walked, who walked the dog, and The walk duration in minutes. It also displays the dog owners’ contact information, such as Names, Addresses and Phone Numbers, and allows the user to view a rating/5 the customer made, based on the service they felt they received.
 
 #### Implementaion plan:
+- Create/Design outline of application
+- Build menu and implement menu option 1: Current Available Jobs:
+  - 1 :Current Available Jobs
+  - 2 :Future/Upcoming Jobs
+  - 3 :Past Jobs
+  - 4 :Exit
+  - Please select (1-4):
+- Build loop including Case choice, with when/if
+- Write class: Dog
+- Build loop for when/if invalid entry on "Which dog would you like to walk?"
+- Add RainbowGem to option 1, to accentuate different words.
+- Build menu option 2: Future/Upcoming Jobs
+- Add walk-date on menu option 2.
+- Add RainbowGem to option 2, to accentuate different words.
+- Build menu option 3: Past Jobs
+- write class: Owner
+- Add Owner details to option 3
+  - Name, Address, Ph.
+- Add rating out of 5 for past walks.
+- Add RainbowGem to option 3, to accentuate different words.
+- Implement correct response when Y/N entered.
+  - Build loop: When user selects Y/N
+  - if 'Y' continue to next prompt.
+  - if 'N' return to main menu.
 
-
-
-
-
-
-#### Help Documentation:
+## Help.
+For Help, please see help.txt file within repository.

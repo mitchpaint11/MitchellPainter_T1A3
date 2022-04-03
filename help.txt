@@ -1,0 +1,19 @@
+Hello again, if you need some help, this guide should help.
+
+Woofz is a dog walkers management Application, by navigating through this app, it will allow you to view, select and confirm
+from a range of dog walking jobs, allowing you to choose which dog you would like to walk and find out how much you will be 
+paid for walking your chosen dog.
+
+NOTE: Please ensure your terminal is set to FULLSCREEN while using this application, to avoid any layout issues or confusion. Thank you!
+
+The application will prompt you to type directly into the terminal. 
+When this happens please enter the information required and press enter to continue.
+You will be provided with options numbered 1-5 and asked to enter a corresponding number to the option you have chosen.
+If the application cannot accept your input, you will recieve a message, "Invalid entry, Try again!"
+It will then display the valid input options and allow you to try again.
+If you enter an invalid option you will again be displayed the main menu and asked to try again!
+
+When prompted with return/enter - "Press return/enter on your keyboard to continue.."
+When prompted with Y/N ? - "Type Y for YES and N for NO.."
+
+Thank you, Have a nice day!
