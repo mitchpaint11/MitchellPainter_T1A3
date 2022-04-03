@@ -75,12 +75,15 @@ loop do
         dog1 = Dog.new("1. Buster", "Labrador", 4, "12:00", "03/05/2022")
         dog1.walk(30)
         dog1.display_walk
+
         dog2 = Dog.new("2. Juno", "Border Collie", 2, "12:00", "03/05/2022")
         dog2.walk(60)
         dog2.display_walk
+
         dog3 = Dog.new("3. Fluffy", "Groodle", 3, "12:00", "03/05/2022")
         dog3.walk(45)
         dog3.display_walk
+
         dog4 = Dog.new("4. Bindi", "Springer Spanial", 2, "12:00", "03/05/2022")
         dog4.walk(60)
         dog4.display_walk
