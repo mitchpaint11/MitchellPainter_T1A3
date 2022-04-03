@@ -1,4 +1,7 @@
-# T1A3_Terminal_App
+# About:
+- Woofz is a dog walkers management Application. The App usage is from a dog walkers perspective, within a two-sided marketplace for the purpose of managing, organising and selecting dog walking jobs.
+- The app is designed and built to help manage, create, read, update, and delete records of previous, current, and future dog walking jobs.
+ 
 #### Source Control Repository Link:
 https://github.com/mitchpaint11/MitchellPainter_T1A3
 
@@ -7,7 +10,10 @@ https://rubystyle.guide/
 
 https://github.com/rubocop/rubocop
 
-#### Features:
+# Installation
+Woofz can be installed by cloning this repository by clicking the Code button at the top of this page.
+
+# Features:
 ##### Feature 1 - Current Available Jobs:
 If "1" is selected it allows the user (Dog Walker) to view today's dog walking jobs, select and confirm which dog they would like to walk and find out how much they will be paid for completing that walk. Depending on the response received by the terminal, the app then prompts the user for their name, asks if they are ready and moves on. 
 When "1" is selected the terminal displays “Hello #{@name} the user is prompted to “return/enter for a list of dogs that need walks today”. This list includes information such as: Name, Breed, Age, and Walk-duration in mins. The user is then prompted with “which dog would you like to walk?” and is prompted to select from the numbered list and enter 1-5 for the selected dog. Once the user has made a selection the app will prompt the user to confirm with a Y/N
