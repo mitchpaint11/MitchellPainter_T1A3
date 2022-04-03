@@ -50,7 +50,7 @@ class Owner
 end
 
 loop do
-    puts Rainbow("Hello! What would you like to view today?").orange
+    puts Rainbow("Hello! Welcome to Woofz, what would you like to view today?").orange
     puts Rainbow("1 :").orange + Rainbow("Current Available Jobs").blue
     puts Rainbow("2 :").orange + Rainbow("Future/Upcoming Jobs").blue
     puts Rainbow("3 :").orange + Rainbow("Past Jobs").blue
