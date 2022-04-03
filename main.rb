@@ -32,6 +32,22 @@ class Dog
     end
 end
 
+# Class Owner: Displays dog owners' details, name, address, phone.
+class Owner
+    attr_reader :phone, :address
+    attr_accessor :name
+
+    def initialize(name, address, phone)
+        @name = Rainbow(name).blue
+        @address = Rainbow(address).blue
+        @phone = Rainbow(phone).blue
+    end
+
+    def display_details
+    print Rainbow(" Name: ").orange + "#{@name}, " + Rainbow("Address: ").orange + "#{@address}, " + Rainbow("PH: ").orange + "#{@phone}"
+    end
+end
+
 loop do
     puts Rainbow("Hello! What would you like to view today?").orange
     puts Rainbow("1 :").orange + Rainbow("Current Available Jobs").blue
@@ -184,64 +200,123 @@ loop do
         gets.chomp
     when "3"
         puts Rainbow(" Past Jobs").blue
-        puts " Name:    Breed:   Age:   Walk-duration:  Time/24hrs:  Date:"
+        # puts " Name:    Breed:   Age:   Walk-duration:  Time/24hrs:  Date:"
+        owner1 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner1.display_details
         dog1 = Dog.new("1. Lucky", "Labrador", 2, "12:00", "03/02/2022")
         dog1.walk(30)
         dog1.display_future_walk
+
+        owner2 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner2.display_details
         dog2 = Dog.new("2. Ruby", "Border Collie", 4, "11:00", "08/03/2022")
         dog2.walk(60)
         dog2.display_future_walk
+
+        owner3 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner3.display_details
         dog3 = Dog.new("3. Sandy", "Groodle", 3, "16:00", "12/03/2022")
         dog3.walk(45)
         dog3.display_future_walk
+
+        owner4 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner4.display_details
         dog4 = Dog.new("4. Lola", "Springer Spanial", 5, "13:30", "19/03/2022")
         dog4.walk(60)
         dog4.display_future_walk
+
+        owner5 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner5.display_details
         dog5 = Dog.new("5. Harley", "Australian Shepherd", 2, "15:00", "21/03/2022")
         dog5.walk(60)
         dog5.display_future_walk
+
+        owner6 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner6.display_details
         dog6 = Dog.new("6. Rocco", "Australian Cattle Dog", 7, "11:00", "17/06/2022")
         dog6.walk(60)
         dog6.display_future_walk
+
+        owner7 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner7.display_details
         dog7 = Dog.new("7. Oreo", "Groodle", 3, "06:30", "28/01/2022")
         dog7.walk(45)
         dog7.display_future_walk
+
+        owner8 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner8.display_details
         dog8 = Dog.new("8. Huxley", "Border Collie", 8, "13:00", "20/01/2022")
         dog8.walk(30)
         dog8.display_future_walk
+
+        owner9 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner9.display_details
         dog9 = Dog.new("9. Jack", "Springer Spanial", 2, "17:00", "23/02/2022")
         dog9.walk(30)
         dog9.display_future_walk
+
+        owner10 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner10.display_details
         dog10 = Dog.new("10. Bella", "Beagle", 3, "17:00", "03/03/2022")
         dog10.walk(30)
         dog10.display_future_walk
+
+        owner11 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner11.display_details
         dog11 = Dog.new("11. Kobe", "Labrador", 2, "12:00", "03/01/2022")
         dog11.walk(30)
         dog11.display_future_walk
+
+        owner12 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner12.display_details
         dog12 = Dog.new("12. Romeo", "Border Collie", 4, "11:00", "04/02/2022")
         dog12.walk(60)
         dog12.display_future_walk
+
+        owner13 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner13.display_details
         dog13 = Dog.new("13. Lily", "Groodle", 3, "16:00", "08/03/2022")
         dog13.walk(45)
         dog13.display_future_walk
+
+        owner14 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner14.display_details
         dog14 = Dog.new("14. Hazel", "Springer Spanial", 5, "13:30", "15/02/2022")
         dog14.walk(60)
         dog14.display_future_walk
+
+        owner15 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner15.display_details
         dog15 = Dog.new("15. Olive", "Australian Shepherd", 2, "15:00", "26/03/2022")
         dog15.walk(60)
         dog15.display_future_walk
+
+        owner16 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner16.display_details
         dog16 = Dog.new("16. Walter", "Australian Cattle Dog", 7, "11:00", "17/06/2022")
         dog16.walk(60)
         dog16.display_future_walk
+
+        owner17 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner17.display_details
         dog17 = Dog.new("17. Ziggy", "Groodle", 3, "06:30", "21/01/2022")
         dog17.walk(45)
         dog17.display_future_walk
+
+        owner18 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner18.display_details
         dog18 = Dog.new("18. Baxter", "Border Collie", 8, "13:00", "20/01/2022")
         dog18.walk(30)
         dog18.display_future_walk
+
+        owner19 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner19.display_details
         dog19 = Dog.new("19. Scout", "Springer Spanial", 2, "17:00", "12/02/2022")
         dog19.walk(30)
         dog19.display_future_walk
+
+        owner20 = Owner.new("John Doe", "261 Anywhere st", "0401234567")
+        owner20.display_details
         dog20 = Dog.new("20. Blue", "Beagle", 3, "17:00", "17/03/2022")
         dog20.walk(30)
         dog20.display_future_walk
