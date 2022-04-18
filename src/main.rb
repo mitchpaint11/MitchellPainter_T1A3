@@ -23,12 +23,12 @@ class Dog
     end
 
     def display_walk
-    puts Rainbow("#{@name} ").green + "is a " + Rainbow("#{@breed}").red + ", is #{@age} years old and needs a #{walk_time} min walk. "
+    puts Rainbow("#{@name} ").green + "is a " + Rainbow(@breed.to_s).red + ", is #{@age} years old and needs a #{walk_time} min walk. "
     end
 
     def display_future_walk
     a = ","
-    puts Rainbow(" #{@name}").green + a + Rainbow(" #{@breed}").red + a + " #{@age} yrs old" + a + Rainbow(" #{walk_time}").green + " min walk"  + a + " #{@future_walk}" + a + " #{@date}"
+    puts Rainbow(" #{@name}").green + a + Rainbow(" #{@breed}").red + a + " #{@age} yrs old" + a + Rainbow(" #{walk_time}").green + " min walk" + a + " #{@future_walk}" + a + " #{@date}"
     end
 end
 
@@ -45,7 +45,7 @@ class Owner
     end
 
     def display_details
-    print Rainbow("Name: ").orange + "#{@name}, " + Rainbow("Address: ").orange + "#{@address}, " + Rainbow("PH: ").orange + "#{@phone}, " + Rainbow("Rating: ").orange + "#{@rating}" +Rainbow("/5)").orange
+    print Rainbow("Name: ").orange + "#{@name}, " + Rainbow("Address: ").orange + "#{@address}, " + Rainbow("PH: ").orange + "#{@phone}, " + Rainbow("Rating: ").orange + @rating.to_s + Rainbow("/5)").orange
     end
 end
 
@@ -121,50 +121,49 @@ loop do
         payment = "You will be paid "
         for_walk = "for this walk!"
 
-    case user_input
-    when "1"
-        puts chosen_dog + Rainbow("Buster!").green + confirm + Rainbow(" Y/N ?").orange
-        gets.chomp.to_i
-        puts chosen_dog_coonfirmed + Rainbow("Buster ").green + for_a + Rainbow("30 min ").red + walk
-        puts return_continue
-        gets.chomp
-        puts payment + Rainbow("$20 ").red + for_walk
-        puts return_main_menu
-    when "2"
-        puts chosen_dog + Rainbow("Juno!").green + confirm + Rainbow(" Y/N ?").orange
-        gets.chomp.to_i
-        puts chosen_dog_coonfirmed + Rainbow("Juno ").green + for_a + Rainbow("60 min ").red + walk
-        puts return_continue
-        gets.chomp
-        puts payment + Rainbow("$30 ").red + for_walk
-        puts return_main_menu
-    when "3"
-        puts chosen_dog + Rainbow("Fluffy!").green + confirm + Rainbow(" Y/N ?").orange
-        gets.chomp.to_i
-        puts chosen_dog_coonfirmed + Rainbow("Fluffy ").green + for_a + Rainbow("45 min ").red + walk
-        puts return_continue
-        gets.chomp
-        puts payment + Rainbow("$25 ").red + for_walk
-        puts return_main_menu
-    when "4"
-        puts chosen_dog + Rainbow("Bindi!").green + confirm + Rainbow(" Y/N ?").orange
-        gets.chomp.to_i
-        puts chosen_dog_coonfirmed + Rainbow("Bindi ").green + for_a + Rainbow("60 min ").red + walk
-        puts return_continue
-        gets.chomp
-        puts payment + Rainbow("$30 ").red + for_walk
-        puts return_main_menu
-    when "5"
-        puts chosen_dog + Rainbow("Juno & Bindi").green + confirm + Rainbow(" Y/N ?").orange
-        gets.chomp.to_i
-        puts chosen_dog_coonfirmed + Rainbow("Juno & Bindi ").green + for_a + Rainbow("60 min ").red + walk
-        puts return_continue
-        gets.chomp
-        puts payment + Rainbow("$40 ").red + for_walk
-        puts return_main_menu
-    else
-        puts invalid
-    end
+        case user_input
+        when "1"
+            puts chosen_dog + Rainbow("Buster!").green + confirm + Rainbow(" Y/N ?").orange
+            puts chosen_dog_coonfirmed + Rainbow("Buster ").green + for_a + Rainbow("30 min ").red + walk
+            puts return_continue
+            gets.chomp
+            puts payment + Rainbow("$20 ").red + for_walk
+            puts return_main_menu
+        when "2"
+            puts chosen_dog + Rainbow("Juno!").green + confirm + Rainbow(" Y/N ?").orange
+            gets.chomp.to_i
+            puts chosen_dog_coonfirmed + Rainbow("Juno ").green + for_a + Rainbow("60 min ").red + walk
+            puts return_continue
+            gets.chomp
+            puts payment + Rainbow("$30 ").red + for_walk
+            puts return_main_menu
+        when "3"
+            puts chosen_dog + Rainbow("Fluffy!").green + confirm + Rainbow(" Y/N ?").orange
+            gets.chomp.to_i
+            puts chosen_dog_coonfirmed + Rainbow("Fluffy ").green + for_a + Rainbow("45 min ").red + walk
+            puts return_continue
+            gets.chomp
+            puts payment + Rainbow("$25 ").red + for_walk
+            puts return_main_menu
+        when "4"
+            puts chosen_dog + Rainbow("Bindi!").green + confirm + Rainbow(" Y/N ?").orange
+            gets.chomp.to_i
+            puts chosen_dog_coonfirmed + Rainbow("Bindi ").green + for_a + Rainbow("60 min ").red + walk
+            puts return_continue
+            gets.chomp
+            puts payment + Rainbow("$30 ").red + for_walk
+            puts return_main_menu
+        when "5"
+            puts chosen_dog + Rainbow("Juno & Bindi").green + confirm + Rainbow(" Y/N ?").orange
+            gets.chomp.to_i
+            puts chosen_dog_coonfirmed + Rainbow("Juno & Bindi ").green + for_a + Rainbow("60 min ").red + walk
+            puts return_continue
+            gets.chomp
+            puts payment + Rainbow("$40 ").red + for_walk
+            puts return_main_menu
+        else
+            puts invalid
+        end
         gets.chomp
 
     when "2"
